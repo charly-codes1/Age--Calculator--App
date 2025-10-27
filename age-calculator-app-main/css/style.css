@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 94%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px 20px 100px 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 80px;
+}
+
+label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 5px;
+}
+
+input {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+input:focus {
+    border-color: hsl(259, 100%, 65%);
+}
+
+input.error {
+    border-color: hsl(0, 100%, 67%);
+}
+
+small {
+    color: hsl(0, 100%, 67%);
+    font-size: 10px;
+    font-style: italic;
+    margin-top: 3px;
+    display: none;
+}
+
+small.active {
+    display: block;
+}
+
+.calculate-btn {
+    background: hsl(259, 100%, 65%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    right: 40px;
+    top: 130px;
+    transition: 0.3s;
+}
+
+.calculate-btn:hover {
+    background: black;
+}
+
+.calculate-btn svg {
+    width: 30px;
+    height: 30px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: hsl(0, 0%, 86%);
+    margin: 70px 0 30px;
+}
+
+.result {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.result span {
+    color: hsl(259, 100%, 65%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+    .inputs {
+        gap: 15px;
+    }
+    .calculate-btn {
+        right: 50%;
+        transform: translateX(50%);
+        top: 190px;
+        width: 55px;
+        height: 55px;
+    }
+    .result {
+        font-size: 42px;
+    }
+}
